@@ -1,22 +1,10 @@
 package ru.netology.data;
 
-import com.github.javafaker.Faker;
-import com.google.gson.internal.bind.JsonTreeReader;
 import lombok.SneakyThrows;
 import org.apache.commons.dbutils.QueryRunner;
-import org.apache.commons.dbutils.handlers.BeanHandler;
-import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
-import javax.management.Query;
 import java.sql.*;
-import java.util.Map;
-import java.util.Properties;
-import java.util.concurrent.Executor;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import static java.sql.DriverManager.getConnection;
 
 public class DataBase {
 
