@@ -11,6 +11,7 @@ import ru.netology.page.LoginPage;
 import ru.netology.page.VerificationPage;
 
 import static com.codeborne.selenide.Selenide.open;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Test {
 
@@ -57,6 +58,8 @@ public class Test {
         login.failedInputData();
         login.input(userData.getName(), DataHelper.invalidPass());
         login.failedInputData();
-        DataHelper.assertStatus(userData.getName());
+        String expected = "blocked";
+        String actual = DataBase.userStatus(userData.getName());
+        assertEquals(expected, actual);
     }
 }

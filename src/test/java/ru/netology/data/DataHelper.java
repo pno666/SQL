@@ -2,7 +2,6 @@ package ru.netology.data;
 
 import com.github.javafaker.Faker;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DataHelper {
 
@@ -20,10 +19,5 @@ public class DataHelper {
         return faker.internet().password();
     }
 
-    public static void assertStatus(String login) {
-        String expected = "blocked";
-        String actual = DataBase.userStatus(login);
-        assertEquals(expected, actual);
-    }
 
 }
